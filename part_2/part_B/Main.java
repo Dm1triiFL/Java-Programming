@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.print("Шубин Дмитрий Б762-2 Вариант 12");
         // Задание 1: Вывести на экран таблицу умножения
         MultiplicationTable multiplicationTable = new MultiplicationTable();
         multiplicationTable.printTable();

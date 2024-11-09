@@ -3,6 +3,7 @@ import java.util.*;
 
 public class Numbs {
     public static void main(String[] args) {
+        System.out.print("Шубин Дмитрий Б762-2 Вариант 12");
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите количество целых чисел n: ");
         int n = scanner.nextInt();
