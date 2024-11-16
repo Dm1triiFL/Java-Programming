@@ -3,7 +3,7 @@ package part_2.part_A;
 import java.util.HashSet;
 
 public class MinimalDistinctDigits {
-    public void findNumberWithMinDistinctDigits(String[] numbers) {
+    public static void findNumberWithMinDistinctDigits(String[] numbers) {
         String result = null;
         int minDistinctCount = Integer.MAX_VALUE;
 

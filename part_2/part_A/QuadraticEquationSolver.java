@@ -1,7 +1,7 @@
 package part_2.part_A;
 
 public class QuadraticEquationSolver {
-    public void solve(double a, double b, double c) {
+    public static void solve(double a, double b, double c) {
         double discriminant = b * b - 4 * a * c;
 
         if (discriminant > 0) {

@@ -2,7 +2,7 @@ package part_2.part_A;
 
 
 public class EvenDigitNumbers {
-    public void analyzeEvenDigitNumbers(String[] numbers) {
+    public static void analyzeEvenDigitNumbers(String[] numbers) {
         int countEven = 0;
         int balancedCount = 0;
 
@@ -19,7 +19,7 @@ public class EvenDigitNumbers {
         System.out.println("Количество чисел с равным количеством четных и нечетных цифр: " + balancedCount);
     }
 
-    private boolean isEven(String number) {
+    private static boolean isEven(String number) {
         for (char c : number.toCharArray()) {
             if ((c - '0') % 2 != 0) {
                 return false;
@@ -28,7 +28,7 @@ public class EvenDigitNumbers {
         return true;
     }
 
-    private boolean isBalanced(String number) {
+    private static boolean isBalanced(String number) {
         int evenCount = 0, oddCount = 0;
         for (char c : number.toCharArray()) {
             if ((c - '0') % 2 == 0) {

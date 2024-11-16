@@ -1,7 +1,7 @@
 package part_2.part_A;
 
 public class PalindromeNumber {
-    public void findPalindrome(String[] numbers) {
+    public static void findPalindrome(String[] numbers) {
         int palindromeCount = 0;
         String secondPalindrome = null;
 
@@ -22,7 +22,7 @@ public class PalindromeNumber {
         }
     }
 
-    private boolean isPalindrome(String number) {
+    private static boolean isPalindrome(String number) {
         return new StringBuilder(number).reverse().toString().equals(number);
     }
 }

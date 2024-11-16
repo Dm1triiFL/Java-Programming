@@ -2,7 +2,7 @@ package part_2.part_A;
 
 
 public class NumbersWithLengthComparison {
-    public void compareWithAverageLength(String[] numbers) {
+    public static void compareWithAverageLength(String[] numbers) {
         int totalLength = 0;
 
         for (String number : numbers) {

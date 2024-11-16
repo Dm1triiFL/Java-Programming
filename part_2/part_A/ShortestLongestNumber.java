@@ -1,7 +1,7 @@
 package part_2.part_A;
 
 public class ShortestLongestNumber {
-    public void findShortestAndLongest(String[] numbers) {
+    public static void findShortestAndLongest(String[] numbers) {
         String shortest = numbers[0];
         String longest = numbers[0];
 
