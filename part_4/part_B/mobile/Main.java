@@ -10,6 +10,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println("Шубин Дмитрий Б762-2 Вариант 12");
         TariffService tariffService = new TariffService();
         Scanner scanner = new Scanner(System.in);
 
