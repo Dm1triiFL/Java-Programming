@@ -22,11 +22,15 @@ public class TextFile extends File {
     public void rename(String newName) {
         java.io.File oldFile = new java.io.File(directory.getPath() + java.io.File.separator + name);
         java.io.File newFile = new java.io.File(directory.getPath() + java.io.File.separator + newName);
-        if (oldFile.renameTo(newFile)) {
-            name = newName;
-            System.out.println("Файл переименован в '" + name + "'.");
-        } else {
-            System.out.println("Ошибка при переименовании файла.");
+        try {
+            if (oldFile.renameTo(newFile)) {
+                name = newName;
+                System.out.println("Файл переименован в '" + name + "'.");
+            } else {
+                System.out.println("Ошибка при переименовании файла.");
+            }
+        } catch (SecurityException e) {
+            System.out.println("Ошибка доступа при попытке переименования: " + e.getMessage());
         }
     }
 
@@ -56,10 +60,14 @@ public class TextFile extends File {
     @Override
     public void delete() {
         java.io.File fileToDelete = new java.io.File(directory.getPath() + java.io.File.separator + name);
-        if (fileToDelete.delete()) {
-            System.out.println("Файл '" + name + "' успешно удален.");
-        } else {
-            System.out.println("Ошибка при удалении файла.");
+        try {
+            if (fileToDelete.delete()) {
+                System.out.println("Файл '" + name + "' успешно удален.");
+            } else {
+                System.out.println("Ошибка при удалении файла.");
+            }
+        } catch (SecurityException e) {
+            System.out.println("Ошибка доступа при попытке удаления файла: " + e.getMessage());
         }
     }
 
@@ -82,6 +90,3 @@ public class TextFile extends File {
                 '}';
     }
 }
-
-
-

@@ -14,9 +14,12 @@ public class Main {
         TariffService tariffService = new TariffService();
         Scanner scanner = new Scanner(System.in);
 
-
+        // Добавление тарифов
         tariffService.addTariff(new BasicTariff("Basic Plan", 9.99, 100));
         tariffService.addTariff(new PremiumTariff("Premium Plan", 19.99, 200));
+
+        // Вывод всех тарифов
+        tariffService.displayTariffs();
 
         while (true) {
             System.out.println("1. Показать общее количество клиентов");
@@ -65,5 +68,3 @@ public class Main {
         }
     }
 }
-
-

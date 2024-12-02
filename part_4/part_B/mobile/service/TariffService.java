@@ -39,4 +39,15 @@ public class TariffService {
     public List<Tariff> getTariffs() {
         return tariffs;
     }
+
+    public void displayTariffs() {
+        if (tariffs.isEmpty()) {
+            System.out.println("Нет доступных тарифов.");
+            return;
+        }
+        System.out.println("Список тарифов:");
+        for (Tariff tariff : tariffs) {
+            System.out.println(tariff.getName());
+        }
+    }
 }
